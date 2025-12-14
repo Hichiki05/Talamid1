@@ -3,7 +3,7 @@
 /* ====================================================== */
 
 :root {
-        --color-primary-dark: #121A4B; /* Dark blue/purple for the banner */
+    --color-primary-dark: #121A4B; /* Dark blue/purple for the banner */
     --color-primary-light: #4A1A9C; /* Lighter purple/blue gradient color */
     --color-secondary-blue: #232D6A; /* Even darker blue for the background */
     --color-text-dark: #333333; /* Dark text color */
@@ -81,7 +81,7 @@ body {
     padding: 10px 10px;
     text-decoration: none; 
     color: var(--color-sidebar-text); 
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 10%;
     margin-right: 30px;
     transition: background-color 0.2s;
@@ -403,6 +403,9 @@ body {
     margin-right: 10px;
     color: var(--color-primary-dark);
 }
+.mobile-header {
+    display: none; 
+}
 
 /* ====================================================== */
 /* 7. MOBILE RESPONSIVENESS (Max Width 768px) */
@@ -417,14 +420,53 @@ body {
     
     /* --- SIDEBAR (The Menu Overlay) --- */
     .sidebar {
-        width: 100%; 
-        padding: 40px 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
+        height: 100vh;
+        width: 60%; 
+        padding: 20px 0;
+        background-color: white;
+        /* border-radius: 5%; */
         
         /* Initial state: Move it off-screen to the left */
         transform: translateX(-100%); 
         transition: transform 0.3s ease-in-out;
         position: fixed; 
         z-index: 100; 
+    }
+    .nav-item{
+        align-items: center;
+        margin-left: 7%;
+        font-size: 15px;
+        padding: 13px 0px;
+        margin-top: 0px;
+    }
+    .user-info {
+        /* Add padding specific to the mobile view */
+        padding: 10px 15px 20px 15px; 
+        border-top: 1px solid #eee; /* Optional visual separation */
+        flex-shrink: 0; /* Prevents it from shrinking if content overflows */
+        
+        /* Style the internal flex layout if it's not already */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 35%;
+    }
+    .separator {
+        display: none;
+    }
+    .separator-top{
+        display: none;
+    }
+    .nav-links {
+        flex-grow: 1; /* Allows the navigation links section to expand */
+        overflow-y: auto; /* Allows scrolling only on the links if needed */
+    }
+    .sidebar .logo {
+        display: none; 
     }
 
     /* Class added by JavaScript when the menu icon is clicked */
@@ -442,6 +484,7 @@ body {
         flex-direction: column; 
         gap: 10px;
         align-items: stretch;
+    }
 
     .input-wrapper {
         max-width: none; 
@@ -486,6 +529,5 @@ body {
         font-size: 24px;
         color: var(--color-primary-dark);
         cursor: pointer;
-    }
     }
 }
