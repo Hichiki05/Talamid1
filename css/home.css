@@ -431,7 +431,6 @@ body {
         padding: 15px 10px;
     }
     
-    /* REMOVED REDUNDANT/OVERRIDING MOBILE LOGO STYLES */
     
     .sidebar .user-info {
         flex-shrink: 0;
