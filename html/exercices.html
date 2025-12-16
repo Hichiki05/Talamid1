@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talamid - Soumettre l'exercice</title>
+    <link rel="stylesheet" href="/css/exercices.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/exercices.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    
+    <div class="mobile-header">
+        <div class="mobile-logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+            </a>
+        </div>
+
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fas fa-bars"></i> 
+        </div>
+    </div>
+    <div class="page-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="/html/home.html">
+                    <img src="/data/talamid-logo.png"  alt="Talamid Logo">
+                    <hr class="separator-top">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/html/home.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Accueil
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-border-all"></i>
+                    Tableau de bord
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Cours
+                </a>
+                <a href="/html/exercices.html" class="nav-item">
+                    <i class="fas fa-dumbbell"></i>
+                    Exercices
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    Portefeuille
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    Réservations
+                </a>
+                
+            </nav>
+
+            <hr class="separator">
+
+            <div class="user-info">
+                <div class="user-avatar"></div>
+                <div class="user-details">
+                    <div class="user-name">User Name</div>
+                    <div class="user-role">Student</div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <h1>Soumettre l'exercice</h1>
+            <p class="subtitle">Déposez votre problème pour obtenir une correction détaillée d'un professeur.</p>
+
+            <div class="progress-bar">
+                <div class="step active"><span>1</span> Informations d'envoi</div>
+                <div class="step"><span>2</span> L'envoi</div>
+                <div class="step"><span>3</span> Paiement</div>
+                <div class="step"><span>4</span> Confirmation</div>
+            </div>
+
+            <section class="form-section">
+                <h3>| Niveau d'études</h3>
+                <p class="section-description">Votre niveau d'études a été automatiquement sélectionné en fonction des informations de votre profil personnel (veuillez confirmer).</p>
+                <div class="button-group horizontal-scroll" data-group="level">
+                    <button class="choice-button" data-value="2ème Bac">2ème Bac</button>
+                    <button class="choice-button" data-value="1ère Bac">1ère Bac</button>
+                    <button class="choice-button" data-value="Tronc Commun">Tronc Commun</button>
+                    <button class="choice-button" data-value="3ère année collège">3ère année collège</button>
+                    <button class="choice-button" data-value="2ère année collège">2ère année collège</button>
+                    <button class="choice-button " data-value="1ère année collège">1ère année collège</button> 
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>| Subject</h3>
+                <div class="button-group horizontal-scroll" data-group="subject">
+                    <button class="choice-button with-icon" data-value="Mathématiques">
+                        <i class="fas fa-calculator"></i> Mathématiques
+                    </button>
+                    <button class="choice-button with-icon" data-value="Physique">
+                        <i class="fas fa-atom"></i> Physique
+                    </button>
+                    <button class="choice-button with-icon" data-value="SVT">
+                        <i class="fas fa-dna"></i> SVT
+                    </button>
+                    
+                    <button class="choice-button with-icon" data-value="Français">
+                        <i class="fas fa-language"></i> Français
+                    </button>
+                    <button class="choice-button with-icon" data-value="Anglais">
+                        <i class="fas fa-globe-americas"></i> Anglais
+                    </button>
+                    <button class="choice-button with-icon" data-value="Philosophie">
+                        <i class="fas fa-book-open"></i> Philosophie
+                    </button>
+                    <button class="choice-button with-icon" data-value="Arabe">
+                        <i class="fas fa-scroll"></i> Arabe
+                    </button>
+                    <button class="choice-button with-icon" data-value="Histoire Géographie">
+                        <i class="fas fa-map-marked-alt"></i> Histoire Géographie
+                    </button>
+                    
+                    <button class="choice-button with-icon" data-value="Informatique">
+                        <i class="fas fa-desktop"></i> Informatique
+                    </button>
+                    <button class="choice-button with-icon" data-value="Technologie Industrielle">
+                        <i class="fas fa-tools"></i> Technologie Industrielle
+                    </button>
+                    <button class="choice-button with-icon" data-value="Sciences de l'ingénieur">
+                        <i class="fas fa-cogs"></i> Sciences de l'ingénieur
+                    </button>
+                    
+                    <button class="choice-button with-icon" data-value="Economie et Organisation Administrative des Entreprises">
+                        <i class="fas fa-chart-line"></i> Economie et Organisation Administrative des Entreprises
+                    </button>
+                    <button class="choice-button with-icon" data-value="Comptabilité et Mathématiques Financières">
+                        <i class="fas fa-coins"></i> Comptabilité et Mathématiques Financières
+                    </button>
+                    <button class="choice-button with-icon" data-value="Economie Générale et Statistiques">
+                        <i class="fas fa-chart-pie"></i> Economie Générale et Statistiques
+                    </button>
+                    <button class="choice-button with-icon" data-value="Droit">
+                        <i class="fas fa-balance-scale"></i> Droit
+                    </button>
+                    <button class="choice-button with-icon" data-value="Informatique de gestion">
+                        <i class="fas fa-laptop-code"></i> Informatique de gestion
+                    </button>
+                    
+                    <button class="choice-button with-icon" data-value="Education Islamique">
+                        <i class="fas fa-quran"></i> Education Islamique
+                    </button>
+                    <button class="choice-button with-icon" data-value="Sciences Végétales et Animales">
+                        <i class="fas fa-seedling"></i> Sciences Végétales et Animales
+                    </button>
+
+
+                </div>
+            </section>
+
+            <section class="form-section service-type-section">
+                <h3>| Service Type</h3>
+                <p class="section-description">Choisissez le service que vous souhaitez afin d'améliorer votre choix de professeur.</p>
+                
+                <div class="button-group horizontal-scroll" data-group="service">
+                    
+                    <div class="service-dropdown-container">
+                        <button class="choice-button service-toggle" data-base-value="Text Explanation">Text Explanation</button>
+                        <div class="sub-options" data-parent-value="Correction">
+                            <button class="choice-button sub-option" data-value="Correction: 1 Exercice">Text Explanation: 1 Exercice</button>
+                            <button class="choice-button sub-option" data-value="Correction: 2 Exercices">Text Explanation: 2 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Correction: 3 Exercices">Text Explanation: 3 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Correction: 4 Exercices">Text Explanation: 4 Exercices</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-dropdown-container">
+                        <button class="choice-button service-toggle" data-base-value="Audio Explanation">Audio Explanation</button>
+                        <div class="sub-options" data-parent-value="Correction">
+                            <button class="choice-button sub-option" data-value="Correction: 1 Exercice">Audio explanation:1 Exercice</button>
+                            <button class="choice-button sub-option" data-value="Correction: 2 Exercices">Audio explanation:2 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Correction: 3 Exercices">Audio explanation:3 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Correction: 4 Exercices">Audio explanation:4 Exercices</button>
+                        </div>
+                    </div>
+                    <div class="service-dropdown-container">
+                        <button class="choice-button service-toggle" data-base-value="Video Explanation">Video Explanation</button>
+                        <div class="sub-options" data-parent-value="Video Explanation">
+                            <button class="choice-button sub-option" data-value="Video: 1 Exercice">video explanation:1 Exercice</button>
+                            <button class="choice-button sub-option" data-value="Video: 2 Exercices">video explanation:2 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Video: 3 Exercices">video explanation:3 Exercices</button>
+                            <button class="choice-button sub-option" data-value="Video: 4 Exercices">video explanation:4 Exercices</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-dropdown-container">
+                        <button class="choice-button service-toggle" data-base-value="Live Explanation">Live Explanation</button>
+                        <div class="sub-options" data-parent-value="Live Explanation">
+                            <button class="choice-button sub-option" data-value="Live: 30 min">Live explanation: 30 min</button>
+                            <button class="choice-button sub-option" data-value="Live: 40 min">Live explanation: 40 min</button>
+                            <button class="choice-button sub-option" data-value="Live: 1 h">Live explanation: 1 h</button>
+                            <button class="choice-button sub-option" data-value="Live: 1 h 30 min">Live explanation: 1 h 30 min</button>
+                            <button class="choice-button sub-option" data-value="Live: 2 h">Live explanation: 2 h</button>
+                        </div>
+                    </div>
+                    
+                </div>     
+            </section>
+            <div class="page-footer-fixed">
+                    <button class="submit-button">Suivant <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div style="height: 80px;"></div> 
+        </div>
+    </div>
+
+   
+</div>
+
+<script src="/main.js"></script>
+</body>
+</html>
