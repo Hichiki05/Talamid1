@@ -1,86 +1,119 @@
-/* ====================================================== */
-/* 1. Global Styles and Colors */
-/* ====================================================== */
-
 :root {
-    --color-primary-dark: #121A4B; /* Dark blue/purple for the banner */
-    --color-primary-light: #4A1A9C; /* Lighter purple/blue gradient color */
-    --color-secondary-blue: #232D6A; /* Even darker blue for the background */
-    --color-text-dark: #333333; /* Dark text color */
-    --color-text-light: #ffffff; /* White text color */
-    --color-background-light: #f4f6f9; /* The main light gray background */
-    --color-sidebar-active: #E0E7FF; /* Light blue for the active sidebar link */
-    --color-sidebar-text: #666666; /* Gray text for inactive sidebar links */
-    --color-view-all: #888888; /* Gray color for 'View All' link */
-    --color-card-background: #ffffff; /* White background for cards */
+    --color-primary-dark: #121A4B;
+    --color-primary-light: #4A1A9C;
+    --color-secondary-blue: #232D6A;
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-background-light: #f4f6f9;
+    --color-sidebar-active: #E0E7FF;
+    --color-sidebar-text: #666666;
+    --color-view-all: #888888;
+    --color-card-background: #ffffff;
 }
 
-/* Set the default font, remove default margins */
 body {
-    font-family: Arial, sans-serif; 
-    margin: 0; 
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: var(--color-background-light); 
-    color: var(--color-text-dark); 
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
 }
 
-/* ====================================================== */
-/* 2. Page Layout (Sidebar and Main Content) */
-/* ====================================================== */
-
-/* This container uses Flexbox to split the page into the left sidebar and the main content area */
 .page-container {
     display: flex;
     min-height: 100vh;
 }
 
-/* -------------------- */
-/* Sidebar (Left Column) */
-/* -------------------- */
 .sidebar {
     width: 200px;
-    background-color: var(--color-card-background);
-    padding: 20px 0; 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); 
-    display: flex;
-    flex-direction: column; 
-    position: fixed; 
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-card-background);
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
 }
 
-/* ====================================================== */
-/* 2. Page Layout (Sidebar and Main Content) */
-/* (Insert this new rule after the existing '.logo' rule) */
-/* ====================================================== */
-
-/* Existing rule for the logo container (where the text was) */
-.logo {
-   font-size: 24px;
+.sidebar .logo {
+    font-size: 24px;
     font-weight: bold;
     color: var(--color-primary-dark);
     padding: 0 10px;
 }
 
-/* NEW RULE: This targets the image INSIDE the logo container */
-.logo img {
-    max-height: 70%; 
-    max-width: 80%; 
+.sidebar .logo img {
+    max-height: 70%;
+    max-width: 80%;
     margin-left: 13px;
     margin-right: 10px;
-    margin-bottom: 20px; 
-    display: block; 
+    margin-bottom: 20px;
+    display: block;
 }
 
 .nav-links {
-    flex-grow: 1;   
+    flex-grow: 1;
+}
+
+.sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--color-sidebar-text);
+    font-size: 14px;
+    margin-left: 10%;
+    margin-right: 30px;
+    transition: background-color 0.2s;
+}
+
+.sidebar .nav-item:hover {
+    background-color: var(--color-sidebar-active);
+    color: var(--color-primary-light);
+    border-radius: 8px;
+}
+
+.sidebar .nav-item.active {
+    background-color: var(--color-sidebar-active);
+    color: var(--color-primary-light);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.sidebar .nav-item.active:hover {
+    background-color: var(--color-sidebar-active);
+    border-radius: 8px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    padding: 0 10px;
+}
+
+.logo img {
+    max-height: 70%;
+    max-width: 80%;
+    margin-left: 13px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.nav-links {
+    flex-grow: 1;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
     padding: 10px 10px;
-    text-decoration: none; 
-    color: var(--color-sidebar-text); 
+    text-decoration: none;
+    color: var(--color-sidebar-text);
     font-size: 14px;
     margin-left: 10%;
     margin-right: 30px;
@@ -92,18 +125,16 @@ body {
     color: var(--color-primary-light);
 }
 .nav-item.active {
-    background-color: var(--color-sidebar-active); 
-    color: var(--color-primary-dark); 
+    background-color: var(--color-sidebar-active);
+    color: var(--color-primary-dark);
     font-weight: bold;
     border-radius: 8px;
 }
 
 .nav-item i {
-    margin-right: 15px; 
-    width: 20px; 
+    margin-right: 15px;
+    width: 20px;
 }
-
-
 
 .separator {
     border: none;
@@ -130,8 +161,8 @@ body {
 .user-avatar {
     width: 30px;
     height: 30px;
-    background-color: #dddddd; 
-    border-radius: 50%; 
+    background-color: #dddddd;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
@@ -145,27 +176,18 @@ body {
     color: #888888;
 }
 
-
-/* -------------------- */
-/* Main Content (Right Area) */
-/* -------------------- */
 .main-content {
-    margin-left: 180px; 
-    flex-grow: 1; 
+    margin-left: 180px;
+    flex-grow: 1;
     padding: 30px;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
-/* ====================================================== */
-/* 3. Hero Banner Styling (The large purple/blue block) */
-/* ====================================================== */
-
 .hero-banner {
-    /* Create a gradient from a darker blue/purple to a lighter one */
     background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-text-light); /* White text */
+    color: var(--color-text-light);
     padding: 40px;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 12px;
     margin-bottom: 40px;
 }
 
@@ -177,25 +199,24 @@ body {
 
 .hero-banner p {
     font-size: 16px;
-    opacity: 0.8; 
-    max-width: 600px; 
+    opacity: 0.8;
+    max-width: 600px;
     margin-bottom: 30px;
 }
 
-/* The container for the search bar and the button, using Flexbox to align them horizontally */
 .search-bar {
     display: flex;
-    gap: 15px; 
+    gap: 15px;
     align-items: center;
 }
 
 .input-wrapper {
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 10px 15px;
-    flex-grow: 1; 
+    flex-grow: 1;
     max-width: 500px;
 }
 
@@ -206,46 +227,38 @@ body {
 }
 
 .input-wrapper input {
-    background: none; 
+    background: none;
     border: none;
     color: var(--color-text-light);
     font-size: 16px;
     width: 100%;
 }
 
-/* Change the color of the placeholder text inside the input box */
 .input-wrapper input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 .input-wrapper input:focus {
-    /* 1. Removes the default browser border/outline when the input is clicked */
-    outline: none; 
+    outline: none;
     border: none;
 }
 .input-wrapper:focus-within {
-    /* 2. Applies the white border to the container when the input inside is focused */
-    border: 1px solid var(--color-text-light); /* White border */
+    border: 1px solid var(--color-text-light);
 }
 
 .teacher-button {
-    background-color: #FF8C00; /* A bright orange color for the action button */
+    background-color: #FF8C00;
     color: var(--color-text-light);
     border: none;
     padding: 12px 25px;
     border-radius: 8px;
     font-weight: bold;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .teacher-button:hover {
-    background-color: #FF8C0090; 
-    
+    background-color: #FF8C0090;
 }
-
-/* ====================================================== */
-/* 4. Section Headers (e.g., "Parcourir par matière") */
-/* ====================================================== */
 
 .section-header {
     display: flex;
@@ -266,16 +279,11 @@ body {
     font-size: 14px;
 }
 
-/* ====================================================== */
-/* 5. Subject Cards (The category list) */
-/* ====================================================== */
-
-/* Use Flexbox to align the subject cards in a single, horizontal row */
 .subject-grid {
     display: flex;
     gap: 10px;
     margin-bottom: 40px;
-    overflow-x: auto; 
+    overflow-x: auto;
     padding-bottom: 10px;
 }
 
@@ -285,10 +293,10 @@ body {
     background-color: var(--color-card-background);
     border: 1px solid #e0e0e0;
     padding: 10px 15px;
-    border-radius: 50px; 
+    border-radius: 50px;
     font-size: 14px;
     font-weight: bold;
-    white-space: nowrap; 
+    white-space: nowrap;
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s;
 }
@@ -303,7 +311,6 @@ body {
     font-size: 16px;
 }
 
-/* Specific colors for the icons to match the design (using general icons for placeholders) */
 .icon-math { color: #8C479B; }
 .icon-physics { color: #539E00; }
 .icon-svt { color: #4CAF50; }
@@ -313,15 +320,8 @@ body {
 .icon-arabic { color: #009688; }
 .icon-info { color: #795548; }
 
-
-/* ====================================================== */
-/* 6. Course Cards (The video list) */
-/* ====================================================== */
-
-/* Use CSS Grid to arrange the video cards into a flexible column layout */
 .course-grid {
     display: grid;
-    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
@@ -329,17 +329,17 @@ body {
 .course-card {
     background-color: var(--color-card-background);
     border-radius: 8px;
-    overflow: hidden; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
 }
 
 .course-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
 }
 
 .thumbnail-container {
-    position: relative; 
+    position: relative;
     width: 100%;
 }
 
@@ -353,7 +353,7 @@ body {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7);
     color: var(--color-text-light);
     padding: 3px 8px;
     border-radius: 4px;
@@ -364,7 +364,7 @@ body {
 .course-title {
     font-size: 16px;
     font-weight: bold;
-    margin: 10px 15px 5px 15px; 
+    margin: 10px 15px 5px 15px;
 }
 
 .course-details {
@@ -390,7 +390,6 @@ body {
     font-weight: bold;
 }
 
-/* The loading text at the bottom */
 .loading-indicator {
     text-align: center;
     padding: 30px 0;
@@ -404,107 +403,73 @@ body {
     color: var(--color-primary-dark);
 }
 .mobile-header {
-    display: none; 
+    display: none;
 }
 
-/* ====================================================== */
-/* 7. MOBILE RESPONSIVENESS (Max Width 768px) */
-/* ====================================================== */
 @media (max-width: 768px) {
 
-    /* --- GLOBAL LAYOUT CHANGES --- */
     .page-container {
-        
-        display: block; 
+        display: block;
     }
-    
-    /* --- SIDEBAR (The Menu Overlay) --- */
+
     .sidebar {
-        display: flex;
+        width: 70%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
         flex-direction: column;
         justify-content: space-between;
         overflow-y: auto;
-        height: 100vh;
-        width: 60%; 
-        padding: 20px 0;
-        background-color: white;
-        /* border-radius: 5%; */
-        
-        /* Initial state: Move it off-screen to the left */
-        transform: translateX(-100%); 
-        transition: transform 0.3s ease-in-out;
-        position: fixed; 
-        z-index: 100; 
-    }
-    .nav-item{
-        align-items: center;
-        margin-left: 7%;
-        font-size: 15px;
-        padding: 13px 0px;
-        margin-top: 0px;
-    }
-    .user-info {
-        /* Add padding specific to the mobile view */
-        padding: 10px 15px 20px 15px; 
-        border-top: 1px solid #eee; /* Optional visual separation */
-        flex-shrink: 0; /* Prevents it from shrinking if content overflows */
-        
-        /* Style the internal flex layout if it's not already */
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 35%;
-    }
-    .separator {
-        display: none;
-    }
-    .separator-top{
-        display: none;
-    }
-    .nav-links {
-        flex-grow: 1; /* Allows the navigation links section to expand */
-        overflow-y: auto; /* Allows scrolling only on the links if needed */
-    }
-    .sidebar .logo {
-        display: none; 
     }
 
-    /* Class added by JavaScript when the menu icon is clicked */
     .sidebar.menu-open {
         transform: translateX(0);
     }
-    
-    /* --- MAIN CONTENT --- */
-    .main-content {
-        margin-left: 0; 
-        padding: 15px; 
+    .sidebar .nav-item {
+        font-size: 16px;
+        margin-left: 7%;
+        margin-right: 20px;
+        padding: 15px 10px;
     }
-    /* --- HERO BANNER (Stacking Search/Button) --- */
+    
+    /* REMOVED REDUNDANT/OVERRIDING MOBILE LOGO STYLES */
+    
+    .sidebar .user-info {
+        flex-shrink: 0;
+    }
+    .nav-links {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .sidebar.menu-open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
     .search-bar {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
         align-items: stretch;
     }
 
     .input-wrapper {
-        max-width: none; 
-        padding: 12px 15px; 
+        max-width: none;
+        padding: 12px 15px;
     }
 
     .teacher-button {
         width: 100%;
-        order: 2; 
+        order: 2;
     }
 
-    /* --- COURSE CARDS (Stacking Videos) --- */
     .course-grid {
-        /* Force a single column layout */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    /* --- SUBJECT CARDS --- */
-    
+
     .mobile-header {
         display: flex;
         justify-content: space-between;
@@ -513,18 +478,17 @@ body {
         position: sticky;
         top: 0;
         z-index: 50;
-        background-color: var(--color-card-background); /* White or light background */
+        background-color: var(--color-card-background);
     }
-    
+
     .mobile-logo {
         margin-right: auto;
-        /* Style your logo here to match the design */
     }
     .mobile-logo img {
         height: 30px;
-        width: auto; /* Adjust logo size for mobile */
+        width: auto;
     }
-    
+
     .menu-icon {
         font-size: 24px;
         color: var(--color-primary-dark);
