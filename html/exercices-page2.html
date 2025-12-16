@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talamid - Soumettre l'exercice</title>
+    <link rel="stylesheet" href="/css/exercices-page2.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/exercices.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    
+    <div class="mobile-header">
+        <div class="mobile-logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+            </a>
+        </div>
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fas fa-bars"></i> 
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+                <hr class="separator-top">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/html/home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                Accueil
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-border-all"></i>
+                Tableau de bord
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-book"></i>
+                Cours
+            </a>
+            <a href="/html/exercices.html" class="nav-item active"> 
+                <i class="fas fa-dumbbell"></i>
+                Exercices
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                Portefeuille
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                Réservations
+            </a>
+        </nav>
+
+        <hr class="separator">
+
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name">User Name</div>
+                <div class="user-role">Student</div>
+            </div>
+        </div>
+    </aside>
+    
+    <div class="main-content">
+        <header>
+            <h1>Soumettre l'exercice</h1>
+            <p class="subtitle">Soumettez votre problème pour obtenir une correction détaillée d'un professeur.</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="step-done step">
+                <span>1</span> Information
+            </div>
+            <div class="step active">
+                <span>2</span> l'envoi
+            </div>
+            <div class="step">
+                <span>3</span> Paiement
+            </div>
+            <div class="step">
+                <span>4</span> Confirmation
+            </div>
+        </div>
+        <form id="submission-form" class="form-submission">
+            
+            <div class="form-group">
+                <h3 class="form-title">Objet</h3>
+                <input type="text" id="subject" placeholder="Saisissez l'objet..." required>
+            </div>
+
+            <div class="form-group">
+                <h3 class="form-title">Description du problème / Question</h3>
+                <textarea id="description" rows="5" placeholder="Saisissez votre description..." required></textarea>
+            </div>
+
+            <div class="form-group upload-section">
+                <h3 class="form-title">Upload files</h3>
+                <p class="section-description">
+                    Choisissez ce que vous souhaitez que l'instructeur fasse pour vous. Il accepte plusieurs types de fichiers.
+                </p>
+
+                <div class="drop-zone" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Choose a file or drag & drop it here</p>
+                    <p class="file-formats">JPEG, PNG, PDF, and MP4 formats, up to 50MB</p>
+                    <button type="button" class="browse-btn">Browse File</button>
+                    <input type="file" id="file-input" multiple accept=".jpeg, .png, .pdf, .mp4" style="display: none;">
+                </div>
+
+                <div id="file-list" class="file-list">
+                    <div class="file-item uploading" data-file-id="1">
+                        <div class="file-info">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="file-name">Exercice1.pdf</span>
+                            <span class="file-size">60 KB of 120 KB</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-text">Uploading...</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <i class="fas fa-times-circle remove-file"></i>
+                    </div>
+
+                    <div class="file-item completed" data-file-id="2">
+                        <div class="file-info">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="file-name">Exercice2.pdf</span>
+                            <span class="file-size">94 KB of 94 KB</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-text completed">Completed</div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <i class="fas fa-trash-alt remove-file"></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="page-footer-fixed">
+    <a href="/html/exercices-page3.html" class="submit-link"> <button type="button" class="submit-button">Suivant →</button>
+    </a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
