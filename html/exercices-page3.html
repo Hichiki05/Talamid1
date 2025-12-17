@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumettre l'exercice - Étape 3</title>
+    <link rel="stylesheet" href="/css/exercices-page3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+    
+    <div class="mobile-header">
+        <div class="mobile-logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+            </a>
+        </div>
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fas fa-bars"></i> 
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+                <hr class="separator-top">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/html/home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                Accueil
+            </a>
+            <a href="/html/tableau-de-bord.html" class="nav-item">
+                <i class="fas fa-border-all"></i>
+                Tableau de bord
+            </a>
+            <a href="/html/cours.html" class="nav-item">
+                <i class="fas fa-book"></i>
+                Cours
+            </a>
+            <a href="/html/exercices.html" class="nav-item active"> 
+                <i class="fas fa-dumbbell"></i>
+                Exercices
+            </a>
+            <a href="/html/portefeuille.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                Portefeuille
+            </a>
+            <a href="/html/reservations.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                Réservations
+            </a>
+        </nav>
+
+        <hr class="separator">
+
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name">User Name</div>
+                <div class="user-role">Student</div>
+            </div>
+        </div>
+    </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h2>Paiement</h2>
+                <p>Déposez votre problème pour obtenir une correction détaillée d'un professeur.</p>
+            </header>
+
+            <div class="stepper-container">
+                <div class="step-progress-line"></div>
+                <div class="step completed">
+                    <span class="step-icon"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="step completed">
+                    <span class="step-icon"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="step active">
+                    <span class="step-icon">3</span>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <div class="payment-overview">
+                    <div class="balance-card">
+                        <div class="balance-header">
+                            <span class="label">SOLDE DU PORTEFEUILLE</span>
+                            <i class="fas fa-wallet wallet-icon"></i>
+                        </div>
+                        <div class="balance-amount">40.00 DH</div>
+                        <button class="add-funds-btn">Ajouter des fonds</button>
+                    </div>
+
+                    <div class="total-card">
+                        <div class="total-header">
+                            <span class="total-label">Total</span>
+                            <span class="total-price">50.00 DH</span>
+                            <i class="fas fa-wallet total-icon"></i>
+                        </div>
+                        <div class="cost-details">
+                            <p>Matière : ## DH</p>
+                            <p>Type de service : ## DH</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-form-section">
+                    <p class="form-instruction">Vous pouvez payer directement ici :</p>
+                    
+                    <div class="payment-method-selector" id="payment-box">
+                        <input type="radio" id="card-pay"  name="payment">
+                        <label for="card-pay"><i class="fas fa-credit-card"></i> Card</label>
+                    </div>
+
+                    <form class="card-form">
+                        <div class="form-row">
+                            <div class="input-group full">
+                                <label>Card number</label>
+                                <div class="input-with-logos">
+                                    <input type="text" id="card-number" placeholder="1234 1234 1234 1234" maxlength="16">
+                                    <div class="card-logos">
+                                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                                        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row split">
+                            <div class="input-group">
+                                <label>Expiration</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="input-group">
+                                <label>CVC</label>
+                                <div class="input-with-logos" >
+                                    <input type="text" placeholder="CVC" id="card-cvc" required>
+                                    <i class="fas fa-info-circle cvc-info"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group full">
+                                <label>Country</label>
+                                <select id="country-select" required>
+                                    <option value="" disabled selected>Sélectionnez votre pays...</option>
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="ZA">Afrique du Sud</option>
+                                    <option value="AL">Albanie</option>
+                                    <option value="DZ">Algérie</option>
+                                    <option value="DE">Allemagne</option>
+                                    <option value="AD">Andorre</option>
+                                    <option value="AO">Angola</option>
+                                    <option value="SA">Arabie saoudite</option>
+                                    <option value="AR">Argentine</option>
+                                    <option value="AU">Australie</option>
+                                    <option value="AT">Autriche</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="BJ">Bénin</option>
+                                    <option value="BR">Brésil</option>
+                                    <option value="BF">Burkina Faso</option>
+                                    <option value="BI">Burundi</option>
+                                    <option value="CM">Cameroun</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="CL">Chili</option>
+                                    <option value="CN">Chine</option>
+                                    <option value="CO">Colombie</option>
+                                    <option value="CG">Congo-Brazzaville</option>
+                                    <option value="CD">Congo-Kinshasa</option>
+                                    <option value="CI">Côte d’Ivoire</option>
+                                    <option value="DK">Danemark</option>
+                                    <option value="DJ">Djibouti</option>
+                                    <option value="EG">Égypte</option>
+                                    <option value="AE">Émirats arabes unis</option>
+                                    <option value="ES">Espagne</option>
+                                    <option value="US">États-Unis</option>
+                                    <option value="FR">France</option>
+                                    <option value="GA">Gabon</option>
+                                    <option value="GR">Grèce</option>
+                                    <option value="GN">Guinée</option>
+                                    <option value="GQ">Guinée équatoriale</option>
+                                    <option value="HT">Haïti</option>
+                                    <option value="IN">Inde</option>
+                                    <option value="IT">Italie</option>
+                                    <option value="JP">Japon</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="MG">Madagascar</option>
+                                    <option value="ML">Mali</option>
+                                    <option value="MA">Maroc</option>
+                                    <option value="MU">Maurice</option>
+                                    <option value="MR">Mauritanie</option>
+                                    <option value="MX">Mexique</option>
+                                    <option value="MC">Monaco</option>
+                                    <option value="NE">Niger</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="RE">Réunion</option>
+                                    <option value="RO">Roumanie</option>
+                                    <option value="GB">Royaume-Uni</option>
+                                    <option value="RU">Russie</option>
+                                    <option value="SN">Sénégal</option>
+                                    <option value="CH">Suisse</option>
+                                    <option value="TD">Tchad</option>
+                                    <option value="TG">Togo</option>
+                                    <option value="TN">Tunisie</option>
+                                    <option value="TR">Turquie</option>
+                                    <option value="VN">Vietnam</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="action-footer">
+                    <button class="btn-suivant" id="finish-step">Suivant <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="confirmation-modal" class="modal-overlay">
+    <div class="modal-content">
+        <button type="button" class="close-modal" id="close-modal">&times;</button>
+        <div class="modal-icon-header">
+            <div class="icon-circle">
+                <i class="fas fa-credit-card"></i>
+            </div>
+        </div>
+        <h2>Veuillez confirmer votre commande</h2>
+        <p class="modal-total-label">Total</p>
+        <div class="modal-total-amount" id="modal-amount">50.00 DH</div>
+        <button type="button" id="final-confirm-btn" class="confirm-btn">Confirmer</button>
+    </div>
+</div>
+
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

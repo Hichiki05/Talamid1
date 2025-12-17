@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de Cours</title>
+    <link rel="stylesheet" href="/css/cours.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+    
+    <div class="mobile-header">
+        <div class="mobile-logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+            </a>
+        </div>
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fas fa-bars"></i> 
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="logo">
+            <a href="/html/home.html">
+                <img src="/data/talamid-logo.png" alt="Talamid Logo">
+                <hr class="separator-top">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/html/home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                Accueil
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-border-all"></i>
+                Tableau de bord
+            </a>
+            <a href="/html/cours.html" class="nav-item">
+                <i class="fas fa-book"></i>
+                Cours
+            </a>
+            <a href="/html/exercices.html" class="nav-item active"> 
+                <i class="fas fa-dumbbell"></i>
+                Exercices
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                Portefeuille
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                Réservations
+            </a>
+        </nav>
+
+        <hr class="separator">
+
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name">User Name</div>
+                <div class="user-role">Student</div>
+            </div>
+        </div>
+    </aside>
+    
+        <main class="main-content">
+            <header class="course-header">
+                <h2>Accueil > Cours</h2>
+                <h1>Bibliothèque de Cours</h1>
+                <p>Parcourez des cours vidéo gratuits organisés par niveau, matière et chapitre.</p>
+            </header>
+
+            <div class="featured-banner">
+                <div class="banner-content">
+                    <div class="banner-info">
+                        <img src="newton-laws-icon.png" alt="Newton's Laws of Motion Icon" class="banner-icon">
+                        <div class="banner-text">
+                            <span class="banner-status">Continue Learning</span>
+                            <h3>Newton's Laws of Motion</h3>
+                            <p>Physics • Mechanics</p>
+                        </div>
+                    </div>
+                    <div class="banner-actions">
+                        <button class="banner-button">
+                            <i class="fas fa-play"></i> Suivant
+                        </button>
+                        <a href="#" class="course-detail-link">Compléter l'exercice</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="filter-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Que souhaitez-vous apprendre ?">
+                </div>
+
+                <div class="dropdown-filters">
+                    <select class="filter-select">
+                        <option>Tout niveau</option>
+                        <option>Niveau A</option>
+                        <option>Niveau B</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>All Subject</option>
+                        <option>Mathematics</option>
+                        <option>Physics</option>
+                    </select>
+                </div>
+
+                <div class="tab-filters">
+                    <button class="filter-tab active">All Videos</button>
+                    <button class="filter-tab">The latest</button>
+                    <button class="filter-tab">Highest rating</button>
+                    <button class="filter-tab">Today</button>
+                    <button class="filter-tab">This week</button>
+                    <button class="filter-tab">This month</button>
+                    <button class="filter-tab">Channels</button>
+                </div>
+            </section>
+            
+            <section class="professor-header">
+                <div class="prof-info">
+                    <img src="prof-ahmed-avatar.jpg" alt="Prof. Ahmed Avatar" class="prof-avatar">
+                    <div class="prof-details">
+                        <h3>Prof. Ahmed</h3>
+                        <p>Mathematics</p>
+                        <small>500 subscribers</small>
+                    </div>
+                </div>
+                <button class="follow-button">Follow</button>
+            </section>
+
+            <section class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-1.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">16:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Mathematics</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>Calculus: Limits and Continuity</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Prof. Ahmed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-2.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">16:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Physics</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>Newton's Laws of Motion</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Sourav Bernard</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-3.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">14:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Writing</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>How to Write a Philosophical Essay</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Du Fen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-4.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">16:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Mathematics</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>Calculus: Limits and Continuity</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Prof. Ahmed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-5.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">16:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Mathematics</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>Calculus: Limits and Continuity</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Prof. Ahmed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video-thumbnail-6.jpg" alt="Video Thumbnail">
+                        <span class="video-duration">14:20</span>
+                        <span class="video-status approved">Approved</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-meta">
+                            <small class="video-subject">Mathematics</small>
+                            <i class="fas fa-ellipsis-v video-menu"></i>
+                        </div>
+                        <h4>Calculus: Limits and Continuity</h4>
+                        <div class="video-channel">
+                            <img src="prof-ahmed-small.jpg" alt="Channel Icon" class="channel-icon">
+                            <span>Prof. Ahmed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="load-more-indicator">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Chargement de la suite...</p>
+            </div>
+            
+        </main>
+        </div>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

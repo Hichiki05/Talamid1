@@ -36,11 +36,11 @@
                 <i class="fas fa-home"></i>
                 Accueil
             </a>
-            <a href="#" class="nav-item">
+            <a href="/html/tableau-de-bord.html" class="nav-item">
                 <i class="fas fa-border-all"></i>
                 Tableau de bord
             </a>
-            <a href="#" class="nav-item">
+            <a href="/html/cours.html" class="nav-item">
                 <i class="fas fa-book"></i>
                 Cours
             </a>
@@ -48,11 +48,11 @@
                 <i class="fas fa-dumbbell"></i>
                 Exercices
             </a>
-            <a href="#" class="nav-item">
+            <a href="/html/portefeuille.html" class="nav-item">
                 <i class="fas fa-briefcase"></i>
                 Portefeuille
             </a>
-            <a href="#" class="nav-item">
+            <a href="/html/reservations.html" class="nav-item">
                 <i class="fas fa-calendar-alt"></i>
                 Réservations
             </a>
@@ -71,24 +71,21 @@
     
     <div class="main-content">
         <header>
-            <h1>Soumettre l'exercice</h1>
+            <h1>L'envoi</h1>
             <p class="subtitle">Soumettez votre problème pour obtenir une correction détaillée d'un professeur.</p>
         </header>
-
-        <div class="progress-bar">
-            <div class="step-done step">
-                <span>1</span> Information
+        <div class="stepper-container progress-bar">
+                <div class="step-progress-line"></div>
+                <div class="step completed">
+                    <span class="step-icon"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="step active">
+                    <span class="step-icon">2</span>
+                </div>
+                <div class="step">
+                    <span class="step-icon">3</span>
+                </div>
             </div>
-            <div class="step active">
-                <span>2</span> l'envoi
-            </div>
-            <div class="step">
-                <span>3</span> Paiement
-            </div>
-            <div class="step">
-                <span>4</span> Confirmation
-            </div>
-        </div>
         <form id="submission-form" class="form-submission">
             
             <div class="form-group">
@@ -151,8 +148,7 @@
     </div>
 </div>
 <div class="page-footer-fixed">
-    <a href="/html/exercices-page3.html" class="submit-link"> <button type="button" class="submit-button">Suivant →</button>
-    </a>
+    <button href="/html/exercices-page4.html" type="button" id="next-step-page2" class="submit-button">Suivant →</button>
 </div>
 
 <script src="script.js"></script>
