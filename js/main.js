@@ -327,4 +327,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    const homeCourseCards = document.querySelectorAll('.course-card');
+    homeCourseCards.forEach(card => {
+        card.style.cursor = "pointer";
+        card.addEventListener('click', function() {
+            const title = this.querySelector('.course-title').textContent;
+            const prof = this.querySelector('.professor-name').textContent;
+            const img = this.querySelector('.thumbnail-image').getAttribute('src');
+            const destination = 'cours2.html';
+            window.location.href = `${destination}?title=${encodeURIComponent(title)}&prof=${encodeURIComponent(prof)}&img=${encodeURIComponent(img)}`;
+        });
+    });
 });
