@@ -1,4 +1,3 @@
-
 :root {
     --color-primary: #4A1A9C;
     --color-primary-dark: #121A4B;
@@ -11,6 +10,7 @@
     --color-view-all: #888888;
     --color-light-gray-border: #eeeeee;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,6 +21,7 @@ body {
 .page-wrapper {
     display: flex;
 }
+
 .mobile-logo {
     display: none;
 }
@@ -104,6 +105,7 @@ body {
     width: 80%;
     margin: 10px auto 20px auto;
 }
+
 .separator-top {
     width: 100%;
     margin-bottom: 30px;
@@ -115,6 +117,7 @@ body {
     margin-bottom: 50px;
     align-items: center;
 }
+
 .user-avatar {
     width: 30px;
     height: 30px;
@@ -122,14 +125,17 @@ body {
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .user-name {
     font-size: 15px;
     font-weight: bold;
 }
+
 .user-role {
     font-size: 12px;
     color: var(--color-view-all);
 }
+
 .progress-bar {
     display: flex;
     justify-content: space-between;
@@ -137,7 +143,7 @@ body {
     margin-bottom: 40px;
     background-color: var(--color-card-background);
     border-radius: 12px;
-    padding: 10px ;
+    padding: 10px;
     width: 100%;
 }
 
@@ -193,6 +199,7 @@ body {
 .progress-bar .step.active {
     color: var(--color-primary);
 }
+
 .progress-bar .step-done {
     color: green;
 }
@@ -204,17 +211,18 @@ body {
 .progress-bar .step.active ~ .step span {
     background-color: rgb(141, 105, 186);
 }
+
 .progress-bar .step.active ~ .step::after {
     background-color: #4A1A9C80;
 }
 
-/* Style for the main content area */
-
-
 .main-content {
-    /* Adjust margin based on your sidebar width (e.g., 250px) */
-    margin-left: 250px; 
+    flex-grow: 1;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin-left: 200px;
     padding: 20px 40px;
+    width: 100%;
 }
 
 .course-header h1 {
@@ -235,10 +243,9 @@ body {
     margin-bottom: 25px;
 }
 
-/* --- Featured Banner --- */
 .featured-banner {
-    background-color: #5d35b1; /* Deep purple background */
-    background-image: url('banner-bg.png'); /* Placeholder for any background image/texture */
+    background-color: #5d35b1;
+    background-image: url('banner-bg.png');
     background-size: cover;
     background-position: center;
     border-radius: 12px;
@@ -270,7 +277,7 @@ body {
     display: block;
     font-size: 0.75rem;
     font-weight: bold;
-    color: #ffc107; /* Yellow/Orange accent */
+    color: #ffc107;
     margin-bottom: 3px;
 }
 
@@ -292,7 +299,7 @@ body {
 }
 
 .banner-button {
-    background-color: #8c7ae6; /* Lighter purple button */
+    background-color: #8c7ae6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -319,18 +326,13 @@ body {
     opacity: 0.8;
 }
 
-/* --- Filter Section --- */
 .filter-section {
-    /* The Rectangle Container */
     background-color: #EEF2FF80;
     border: 1px solid #0000001A;
     border-radius: 12px;
     padding: 24px;
     margin: 20px auto;
-    max-width: 1100px; /* Adjust based on your layout */
-
-
-    /* Layout: Stacks elements vertically with spacing */
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -369,7 +371,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     background-color: #fff;
-    appearance: none; /* Remove default arrow */
+    appearance: none;
     font-size: 0.9rem;
     color: #333;
     cursor: pointer;
@@ -405,7 +407,6 @@ body {
     background-color: #f0f0f0;
 }
 
-/* --- Professor Header --- */
 .professor-header {
     display: flex;
     justify-content: space-between;
@@ -418,11 +419,22 @@ body {
     border-radius: 12px;
     padding: 24px;
     margin: 20px auto;
-    max-width: 1100px; /* Adjust based on your layout */
+    max-width: 1100px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-    /* Layout: Stacks elements vertically with spacing */
+.prof-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 
+.prof-link-wrapper:hover .prof-avatar {
+    opacity: 0.8;
+}
+
+.prof-link-wrapper:hover h3 {
+    text-decoration: underline;
 }
 
 .prof-info {
@@ -473,8 +485,6 @@ body {
     background-color: #7262c5;
 }
 
-
-/* --- Video Grid --- */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -499,7 +509,6 @@ body {
 .video-thumbnail {
     position: relative;
     width: 100%;
-    /* Aspect ratio 16:9 for video thumbnails */
     padding-top: 56.25%; 
 }
 
@@ -535,7 +544,7 @@ body {
 }
 
 .video-status.approved {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
 }
 
 .video-details {
@@ -585,7 +594,6 @@ body {
     color: #666;
 }
 
-/* --- Load More Indicator --- */
 .load-more-indicator {
     text-align: center;
     margin: 20px 0;
@@ -603,110 +611,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .page-wrapper {
-        display: block;
-    
-    }
-    .page-wrapper, .main-content {
-        max-width: none !important; /* Removes desktop constraints */
-        width: 100%;
-    }
-    .main-content {
-        width: 100%;       /* Force it to fill the screen */
-        box-sizing: border-box;
-        margin-left: 0;
-        padding: 15px;
-        margin-top: 15%;
-    }
-    .stepper-container {
-        margin-bottom: 30px;
-        margin-top: 20px;
-        padding: 0 10px;
-    }
-
-    /* Hide labels on very small screens to prevent overlapping */
-    .step-label {
-        display: none;
-    }
-
-    /* Optionally show only the active step's label */
-    .step.active .step-label {
-        display: block;
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        font-size: 0.7rem;
-    }
-
-    .step-icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .step-progress-line {
-        top: 14px; /* Adjust to match smaller icon height */
-    }
-
-    .mobile-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-        z-index: 50;
-        background-color: var(--color-card-background);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    .mobile-logo {
-        display:flex;
-        margin-right: auto;
-    }
-    .mobile-logo img {
-        height: 30px;
-        width: auto;
-    }
-    .menu-icon {
-        font-size: 24px;
-        color: var(--color-primary-dark);
-        cursor: pointer;
-    }
-
-    .sidebar {
-        width: 70%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow-y: auto;
-    }
-
-    .sidebar.menu-open {
-        transform: translateX(0);
-    }
-    .sidebar .nav-item {
-        font-size: 16px;
-        margin-left: 7%;
-        margin-right: 20px;
-        padding: 15px 10px;
-    }
-
-    
-    .sidebar .user-info {
-        flex-shrink: 0;
-    }
-    .sidebar .logo img {
-       height: 30px;
-        width: auto;
-    }
-
-    /* FIX 1: The Banner - Stack icon and text */
     .banner-content {
         flex-direction: column;
         align-items: flex-start;
@@ -717,17 +621,16 @@ body {
 
     .banner-info {
         flex-direction: column;
-        align-items: flex-start; /* Stack icon on top of text */
+        align-items: flex-start;
     }
 
     .banner-icon {
-        width: 100%; /* Make icon full width of the banner */
-        max-width: 400px; /* Prevent it from getting too huge */
+        width: 100%;
+        max-width: 400px;
         height: auto;
         margin-right: 0;
         margin-bottom: 15px;
     }
-    
 
     .prof-info {
         flex-direction: column;
@@ -738,10 +641,8 @@ body {
         margin-bottom: 10px;
     }
 
-    /* FIX 3: Video Grid - Ensure 1 column on small phones */
     .video-grid {
-        grid-template-columns: 1fr; /* Force one card per row */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-
 }
