@@ -259,8 +259,8 @@ body {
 }
 
 .banner-icon {
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 100px;
     border-radius: 8px;
     object-fit: cover;
     margin-right: 15px;
@@ -321,7 +321,19 @@ body {
 
 /* --- Filter Section --- */
 .filter-section {
-    margin-bottom: 30px;
+    /* The Rectangle Container */
+    background-color: #EEF2FF80;
+    border: 1px solid #0000001A;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 1100px; /* Adjust based on your layout */
+
+
+    /* Layout: Stacks elements vertically with spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
 
 .search-bar {
@@ -358,13 +370,10 @@ body {
     border-radius: 6px;
     background-color: #fff;
     appearance: none; /* Remove default arrow */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15 9.414l-1.414-1.414L10 10.586 6.414 7l-1.414 1.414L9.293 12.95z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 1em;
     font-size: 0.9rem;
     color: #333;
     cursor: pointer;
+    width: 50%;
 }
 
 .tab-filters {
@@ -404,6 +413,16 @@ body {
     padding: 15px 0;
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 1100px; /* Adjust based on your layout */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    /* Layout: Stacks elements vertically with spacing */
+
 }
 
 .prof-info {
@@ -412,12 +431,12 @@ body {
 }
 
 .prof-avatar {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 15px;
     object-fit: cover;
-    border: 2px solid #8c7ae6;
+    cursor: pointer;
 }
 
 .prof-details h3 {
@@ -581,4 +600,148 @@ body {
 .load-more-indicator p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        display: block;
+    
+    }
+    .page-wrapper, .main-content {
+        max-width: none !important; /* Removes desktop constraints */
+        width: 100%;
+    }
+    .main-content {
+        width: 100%;       /* Force it to fill the screen */
+        box-sizing: border-box;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 15%;
+    }
+    .stepper-container {
+        margin-bottom: 30px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    /* Hide labels on very small screens to prevent overlapping */
+    .step-label {
+        display: none;
+    }
+
+    /* Optionally show only the active step's label */
+    .step.active .step-label {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 0.7rem;
+    }
+
+    .step-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .step-progress-line {
+        top: 14px; /* Adjust to match smaller icon height */
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        z-index: 50;
+        background-color: var(--color-card-background);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .mobile-logo {
+        display:flex;
+        margin-right: auto;
+    }
+    .mobile-logo img {
+        height: 30px;
+        width: auto;
+    }
+    .menu-icon {
+        font-size: 24px;
+        color: var(--color-primary-dark);
+        cursor: pointer;
+    }
+
+    .sidebar {
+        width: 70%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
+    }
+
+    .sidebar.menu-open {
+        transform: translateX(0);
+    }
+    .sidebar .nav-item {
+        font-size: 16px;
+        margin-left: 7%;
+        margin-right: 20px;
+        padding: 15px 10px;
+    }
+
+    
+    .sidebar .user-info {
+        flex-shrink: 0;
+    }
+    .sidebar .logo img {
+       height: 30px;
+        width: auto;
+    }
+
+    /* FIX 1: The Banner - Stack icon and text */
+    .banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .banner-info {
+        flex-direction: column;
+        align-items: flex-start; /* Stack icon on top of text */
+    }
+
+    .banner-icon {
+        width: 100%; /* Make icon full width of the banner */
+        max-width: 400px; /* Prevent it from getting too huge */
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+
+    .prof-info {
+        flex-direction: column;
+    }
+
+    .prof-avatar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* FIX 3: Video Grid - Ensure 1 column on small phones */
+    .video-grid {
+        grid-template-columns: 1fr; /* Force one card per row */
+        gap: 20px;
+    }
+
 }
